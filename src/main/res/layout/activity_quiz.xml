@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="16dp"
+    tools:context=".QuizActivity">
+
+
+    <TextView
+        android:id="@+id/text_view_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="目前已做对：0"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/text_view_question_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_score"
+        android:text="目前的进度：1/X"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:freezesText="true" />
+
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="剩余00:30"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/text_view_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/radio_group"
+        android:layout_marginBottom="16dp"
+        android:text="1.您正在看到的是乐学偶得的安卓课程\n2.您正在看到的是乐学偶得的Python课程\n3.您正在看到的是乐学偶得的Java课程"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="21dp"
+        android:freezesText="true"/>
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <RadioButton
+            android:id="@+id/radio_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选项1"
+            android:textSize="25sp"
+            android:freezesText="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选项2"
+            android:textSize="25sp"
+            android:freezesText="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选项3"
+            android:textSize="25sp"
+            android:freezesText="true"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_confirm_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group"
+        android:layout_marginTop="16dp"
+        android:text="点我确定提交"
+        android:textSize="20dp"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/text_view_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_confirm_next"
+        android:text="【温馨提示】目前您挑战的难度为："
+        android:textColor="@android:color/black"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/text_view_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_difficulty"
+        android:text="【温馨提示】目前您挑战的课程为："
+        android:textColor="@android:color/black"
+        android:freezesText="true"/>
+
+</RelativeLayout>
